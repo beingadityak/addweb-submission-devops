@@ -15,7 +15,7 @@ resource "aws_ecs_task_definition" "app_def" {
 [
   {
     "cpu": 256,
-    "image": "beingadityak/sample-nodejs-app:latest",
+    "image": "${var.image_name}",
     "memory": 512,
     "name": "app",
     "networkMode": "awsvpc",
